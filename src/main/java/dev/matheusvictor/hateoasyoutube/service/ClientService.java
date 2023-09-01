@@ -9,7 +9,7 @@ public interface ClientService {
 
     List<Client> getAllClients();
 
-    Optional<Client> getClientById(Long id);
+    Client getClientById(Long id);
 
     Client saveClient(Client client);
 }
