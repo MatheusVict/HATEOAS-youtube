@@ -81,7 +81,7 @@ mvnw.cmd spring-boot:run
   "id": "1",
   "name": "Muryllo",
   "links": [
-    self: "http://localhost:8080/clients/1"
+    "self": "http://localhost:8080/clients/1"
   ]
 }
 ```
@@ -93,7 +93,7 @@ mvnw.cmd spring-boot:run
   "id": "1",
   "name": "Muryllo",
   "links": [
-    self: "http://localhost:8080/clients/1"
+    "self": "http://localhost:8080/clients/1"
   ]
 }
 ```
