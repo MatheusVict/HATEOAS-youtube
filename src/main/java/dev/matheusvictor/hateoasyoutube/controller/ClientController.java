@@ -20,12 +20,16 @@ public class ClientController {
 
     @GetMapping
     public List<Client> getAllClients() {
-        return clientService.getAllClients();
+        List<Client> allClients = clientService.getAllClients();
+        return allClients.stream().map(client ->
+                client.add(linkTo(methodOn(ClientController.class).getClientById(client.getId())).withSelfRel())
+                ).toList();
     }
 
     @GetMapping("/{id}")
     public Client getClientById(@PathVariable Long id) {
-        return clientService.getClientById(id);
+        return clientService.getClientById(id)
+                .add(linkTo(methodOn(ClientController.class).getAllClients()).withRel("Return to all clients"));
     }
 
     @PostMapping
